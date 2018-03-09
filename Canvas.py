@@ -12,7 +12,7 @@ class Canvas:
         self.matrix.append(self.generate_horizontal_border())
 
     def in_range(self, x, y):
-        return x > 0 and x <= self.width and y > 0 and y <= self.height
+        return 0 < x <= self.width and  0 < y <= self.height
 
     def in_range_point(self, point):
         (x, y) = point
