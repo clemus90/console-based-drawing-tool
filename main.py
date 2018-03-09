@@ -1,17 +1,5 @@
 from Canvas import Canvas
 
-def draw_line(canvas, x1, y1, x2, y2):
-    canvas.draw_line(x1, y1, x2, y2)
-    return canvas
-
-def draw_rectangle(canvas, x1, y1, x2, y2):
-    canvas.draw_rectangle(x1, y1, x2, y2)
-    return canvas
-
-def fill(canvas, x1, y1, colour):
-    canvas.fill(x1, y1, colour)
-    return canvas
-
 def command_selector(canvas, command):
     args = command.split(' ')
     operation = args[0]
