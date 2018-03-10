@@ -55,16 +55,16 @@ class Canvas:
                 self.matrix[y][i] = "x"
     
     def draw_rectangle(self, x1, y1, x2, y2):
-        (minX, maxX, minY, maxY) = (min(x1, x2), max(x1, x2),
+        (min_x, max_x, min_y, max_y) = (min(x1, x2), max(x1, x2),
             min(y1, y2), max(y1, y2))
-        if not (self.in_range(minX, minY) 
-            and self.in_range(maxX, maxY)):
+        if not (self.in_range(min_x, min_y) 
+            and self.in_range(max_x, max_y)):
                 print("Rectangle out of range")
         else:
-            self.draw_horizontal_line(minY, minX, maxX)
-            self.draw_horizontal_line(maxY, minX, maxX)
-            self.draw_vertical_line(minX, minY, maxY)
-            self.draw_vertical_line(maxX, minY, maxY)
+            self.draw_horizontal_line(min_y, min_x, max_x)
+            self.draw_horizontal_line(max_y, min_x, max_x)
+            self.draw_vertical_line(min_x, min_y, max_y)
+            self.draw_vertical_line(max_x, min_y, max_y)
 
     def fill(self, x, y, colour):
         if not self.in_range(x, y):
@@ -77,9 +77,9 @@ class Canvas:
                 visited.add((x0,y0))
                 self.matrix[y0][x0] = colour
                 for e in [-1, 1]:
-                    advanceY = (x0, y0 + e)
-                    advanceX = (x0 + e, y0)
-                    for point in [advanceX, advanceY]:
+                    advance_y = (x0, y0 + e)
+                    advance_x = (x0 + e, y0)
+                    for point in [advance_x, advance_y]:
                         if (self.in_range_point(point) and (point not in visited) and
                             self.matrix[point[1]][point[0]] != "x"):
                                 queue.append(point)
