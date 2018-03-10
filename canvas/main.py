@@ -1,4 +1,4 @@
-from Canvas import Canvas
+from canvas import Canvas
 from functools import wraps
 
 def identity(x):
