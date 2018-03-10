@@ -70,7 +70,7 @@ def main():
         command = input("enter command: ")
         (loop_break, current_canvas) = command_selector(current_canvas, command)
         if current_canvas is not None:
-            current_canvas.print()
+            print(current_canvas)
 
 if __name__ == "__main__":
     main()

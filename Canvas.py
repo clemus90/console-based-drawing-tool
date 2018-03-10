@@ -24,9 +24,8 @@ class Canvas:
     def generate_inner_row(self):
         return ['|'] + [' ' for x in range(self.width)] + ['|']
 
-    def print(self):
-        for i in range(self.height + 2):
-            print(''.join(self.matrix[i]))
+    def __str__(self):
+        return '\n'.join([''.join(self.matrix[i]) for i in range(self.height + 2)])
 
     def draw_line(self, x1, y1, x2, y2):
         if x1 == x2:
