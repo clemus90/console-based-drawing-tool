@@ -1,5 +1,5 @@
 # Canvas on terminal
-This project presents a command line canvas solution that accepts the following commands
+This project presents a command line canvas solution that accepts the following commands: C, L, R, B, Q, usage details covered in the section *Usage Instructions*
 ## Run the solution
 ### prerequisites
 - python 3
@@ -45,3 +45,8 @@ Draws a rectangle using the given points using the minimum of the x and y compon
 `B <x0> <y0> <colour>`
 
 Spread the *colour* from the point (x0, y0) horizontally and vertically stoping at the edge of the canvas or when encounters a line denoted by *x*
+
+### Quit
+`Q`
+
+Exits the application.
